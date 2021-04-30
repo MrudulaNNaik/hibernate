@@ -16,7 +16,9 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
-        Student student = new Student(2, "poorna", 8,69);
+        StudentName studentName = new StudentName("Mrudula", "N", "Naik");
+        //Student student = new Student(2, "poorna", 8,69);
+        Student student = new Student(3, 9, 59, studentName);
         
         
         Configuration configuration = new Configuration().configure().addAnnotatedClass(Student.class);
@@ -30,9 +32,11 @@ public class App
 		/*
 		 * session.save(student); transaction.commit();
 		 */
-        Student s = session.get(Student.class, 1);
-		System.out.println(s);
+		/*
+		 * Student s = session.get(Student.class, 1); System.out.println(s);
+		 */
 		 
+        session.save(student);
 		transaction.commit();
         
         
