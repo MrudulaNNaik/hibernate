@@ -27,9 +27,13 @@ public class App
         Transaction transaction = session.beginTransaction();
         
 		
-		  session.save(student);
-		  transaction.commit();
+		/*
+		 * session.save(student); transaction.commit();
+		 */
+        Student s = session.get(Student.class, 1);
+		System.out.println(s);
 		 
+		transaction.commit();
         
         
       

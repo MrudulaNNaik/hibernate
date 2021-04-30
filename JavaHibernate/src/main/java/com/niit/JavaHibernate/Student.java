@@ -11,7 +11,7 @@ public class Student {
 	int _id;
 	
 	String name;
-	@Column(name = "trimester")
+	//@Column(name = "trimester")
 	int semester;
 	int average;
 	
@@ -47,6 +47,12 @@ public class Student {
 	}
 	public void setAverage(int average) {
 		this.average = average;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "\n"+_id+"\t"+name+"\t"+semester+"\t"+average;
 	}
 	
 	
