@@ -16,16 +16,22 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
-        Student student = new Student(1, "naik", 8,96);
+        Student student = new Student(2, "poorna", 8,69);
+        
         
         Configuration configuration = new Configuration().configure().addAnnotatedClass(Student.class);
+
         
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         
-        session.delete(student);
-        transaction.commit();
+		
+		  session.save(student);
+		  transaction.commit();
+		 
+        
+        
       
     }
 }

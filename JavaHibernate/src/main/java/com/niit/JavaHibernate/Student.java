@@ -1,33 +1,34 @@
 package com.niit.JavaHibernate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Transient;
 
-@Entity
+@Entity(name = "student_table")
 public class Student {
-	
 	@Id
-	int id;
+	int _id;
 	
 	String name;
-	int sem;
+	@Column(name = "trimester")
+	int semester;
 	int average;
 	
-	
-	
-	public Student(int id, String name, int sem, int average) {
+	public  Student() {}
+
+	public Student(int id, String name, int semester, int average) {
 		super();
-		this.id = id;
+		this._id = id;
 		this.name = name;
-		this.sem = sem;
+		this.semester = semester;
 		this.average = average;
 	}
 	public int getId() {
-		return id;
+		return _id;
 	}
 	public void setId(int id) {
-		this.id = id;
+		this._id = id;
 	}
 	public String getName() {
 		return name;
@@ -35,11 +36,11 @@ public class Student {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getSem() {
-		return sem;
+	public int getSemester() {
+		return semester;
 	}
-	public void setSem(int sem) {
-		this.sem = sem;
+	public void setSemester(int semester) {
+		this.semester = semester;
 	}
 	public int getAverage() {
 		return average;
