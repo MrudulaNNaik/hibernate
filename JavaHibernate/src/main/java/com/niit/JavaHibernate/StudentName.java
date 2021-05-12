@@ -12,8 +12,6 @@ public class StudentName {
 	StudentName(){}
 	
 	
-	
-	
 	public StudentName(String fName, String mName, String lName) {
 		super();
 		this.fName = fName;

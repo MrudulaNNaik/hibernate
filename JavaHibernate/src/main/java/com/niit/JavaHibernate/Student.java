@@ -5,7 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Transient;
 
-@Entity(name = "student_table")
+@Entity
+//(name = "student_table")
 public class Student {
 	@Id
 	int _id;
